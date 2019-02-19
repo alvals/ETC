@@ -161,20 +161,20 @@ void parse_package_1(unsigned char *cadena, int tam_in, float *datos, int tam_ou
         automatron= (int)(cadena[20]);    //conversion de tipo a short
         float BAR;
         // LAST
-        // int y1 = 0;
-        // int y2 = 0;
-        // int y3 = 0;
-        // int y4 = cadena[18];
+        int y1 = 0;
+        int y2 = 0;
+        int y3 = 0;
+        int y4 = cadena[18];
         //
-        // farharbor = (cadena[20] >> 4) & 0x0000000f;
-        // y1 = (y4 << 12) & 0x000ff000;
-        // y2 = (cadena[19] << 4) & 0x00000ffO;
-        // farharbor2 = y1 | y2 | farharbor1;
-        // BAR = farharbor2 * 0.01;
+        y3 = (cadena[20] >> 4) & 0x0000000f;
+        y1 = (y4 << 12) & 0x000ff000;
+        y2 = (cadena[19] << 4) & 0x00000ff0;
+        farharbor2 = y1 | y2 | y3;
+        BAR = farharbor2 * 0.01;
 
         // borrar
         // float BAR;
-        BAR = 0;
+        // BAR = 0;
 
         //OLD
         // automatron & 0xf0;
